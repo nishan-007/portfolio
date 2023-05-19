@@ -1,0 +1,60 @@
+@import "../../../variables";
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: $nav-height;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: $spacing-inline;
+  background-color: $background-dark-color;
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      margin-inline-start: $margin-32;
+      a {
+        font-size: $font-size-medium-2;
+      }
+    }
+  }
+  .logo {
+    font-size: $font-size-large;
+    font-weight: bold;
+    strong {
+      color: $secondary-color;
+    }
+  }
+  button {
+    display: none;
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 572px) {
+  nav {
+    padding-inline: $spacing-inline-mobile;
+    ul {
+      flex-direction: column;
+      justify-content: center;
+      background-color: $background-dark-color-90;
+      gap: 48px;
+      position: fixed;
+      top: $nav-height;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      transform: translateX(100%);
+      transition: all 225ms linear;
+    }
+    .show-links {
+      transform: translateX(0);
+    }
+    button {
+      display: block;
+    }
+  }
+}

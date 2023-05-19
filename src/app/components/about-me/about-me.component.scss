@@ -1,0 +1,167 @@
+@import "../../../variables.scss";
+
+.about-me {
+  padding-inline: $spacing-inline 0;
+  background-color: $background-dark-color;
+  padding-block: $section-spacing;
+  position: relative;
+  figure {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 42px;
+    .image-wrapper {
+      width: 550px;
+      isolation: isolate;
+      &::before {
+        content: "";
+        background: url("../../../assets/img/background-design.svg") no-repeat 0
+          0;
+        position: absolute;
+        top: 15%;
+        right: 0;
+        width: 450px;
+        aspect-ratio: 1;
+        z-index: -1;
+      }
+      img {
+        object-fit: contain;
+        max-width: 100%;
+        position: relative;
+      }
+    }
+    figcaption {
+      z-index: 5;
+      width: 45%;
+    }
+    p {
+      margin-block-end: $margin-24;
+    }
+    li {
+      justify-content: flex-start;
+      gap: 24px;
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+      p {
+        flex-basis: 75%;
+      }
+    }
+  }
+}
+
+.wavy-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wavy-shape svg {
+  position: relative;
+  display: block;
+  width: calc(180% + 1.3px);
+  height: 120px;
+}
+
+.wavy-shape .shape-fill {
+  fill: $background-normal-color;
+}
+
+@media screen and (min-width: 1201px) {
+  .about-me {
+    figure {
+      .image-wrapper {
+        &::before {
+          width: 550px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .about-me {
+    padding-block-end: $section-spacing;
+    figure {
+      gap: 0;
+      .image-wrapper {
+        width: 450px;
+      }
+      figcaption {
+        width: 50%;
+        p {
+          flex-basis: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about-me {
+    figure {
+      figcaption {
+        width: 60%;
+        p {
+          flex-basis: 85%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 872px) {
+  .about-me {
+    padding-inline: 0;
+    padding-block-end: 0;
+    figure {
+      flex-direction: column;
+      align-items: center;
+      .image-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-block-end: $section-spacing;
+        &::before {
+          transform: translateX(-50%);
+          right: unset;
+          left: 50%;
+        }
+        img {
+          width: 500px;
+        }
+      }
+      figcaption {
+        padding-inline: $spacing-inline;
+        width: 100%;
+        background-color: $background-normal-color;
+        p {
+          flex-basis: 85%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 572px) {
+  .about-me {
+    figure {
+      .image-wrapper {
+        width: 100%;
+        &::before {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      figcaption {
+        padding-inline: $spacing-inline-mobile;
+      }
+    }
+  }
+}

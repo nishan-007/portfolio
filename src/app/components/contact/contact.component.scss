@@ -1,0 +1,12 @@
+@import "../../../variables.scss";
+
+.contacts-wrapper {
+  padding-inline: $spacing-inline;
+  margin-block: $margin-32;
+  h2 {
+    font-size: clamp(4rem, 5rem, 5rem);
+  }
+}
+
+.contact-text {
+}

@@ -1,0 +1,180 @@
+@import "../../../variables.scss";
+
+.skills-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-block: $section-spacing;
+  gap: 48px;
+  padding-inline: $spacing-inline;
+  button {
+    background-color: $secondary-color;
+    padding: $btn-padding;
+    border-radius: $btn-border-radius;
+    font-size: $font-size-medium-2;
+    box-shadow: $btn-box-shadow;
+    transition: transform 125ms linear;
+    &:hover {
+      background-color: $accent-color;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.skills {
+  flex-basis: 45%;
+  h2 {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60%;
+      right: -60px;
+      border-radius: $design-line-border-radius-right;
+      height: $design-line-height;
+      background-color: $secondary-color;
+    }
+  }
+  p {
+    margin-block-end: $margin-24;
+  }
+}
+
+.skills-list {
+  flex-basis: 55%;
+  flex-direction: column;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      flex-direction: column;
+      margin: 0 60px 72px 0;
+      min-width: 84px;
+    }
+  }
+  svg {
+    width: 56px;
+    height: 56px;
+  }
+  p {
+    font-weight: 500;
+  }
+  button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .skills {
+    h2 {
+      &::after {
+        width: 55%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .skills-wrapper {
+    gap: 32px;
+  }
+  .skills {
+    h2 {
+      &::after {
+        width: 50%;
+      }
+    }
+  }
+  .skills-list {
+    ul {
+      li {
+        margin: 0 42px 60px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 872px) {
+  .skills-wrapper {
+    flex-direction: column;
+  }
+  .skills {
+    h2 {
+      &::after {
+        width: 35%;
+      }
+    }
+    p {
+      text-align: left;
+    }
+    button {
+      display: none;
+    }
+  }
+  .skills-list {
+    ul {
+      li {
+        margin: 0 60px 42px 0;
+        svg {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+    button {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .skills-list {
+    button {
+      font-size: $font-size-medium-2;
+    }
+  }
+}
+
+@media screen and (max-width: 572px) {
+  .skills-wrapper {
+    padding-inline: $spacing-inline-mobile;
+  }
+  .skills {
+    h2 {
+      &::after {
+        width: 60%;
+        right: -32px;
+      }
+    }
+  }
+  .skills-list {
+    ul {
+      li {
+        margin: 0 48px 42px 0;
+        svg {
+          width: 42px;
+          height: 42px;
+        }
+      }
+    }
+    button {
+      font-size: $mobile-font-size;
+    }
+  }
+}
+
+@media screen and (max-width: 472px) {
+  .skills-list {
+    ul {
+      li {
+        margin: 0 28px 36px 0;
+        svg {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+  }
+}
