@@ -96,17 +96,7 @@
     line-height: 1;
   }
   .lets-talk-btn {
-    padding: $btn-padding;
-    font-size: $font-size-medium-1;
-    border-radius: $btn-border-radius;
-    background-color: $secondary-color;
-    box-shadow: $btn-box-shadow;
-    transition: all 225ms ease-out;
     z-index: 10;
-    &:hover {
-      transform: scale(1.1);
-      background-color: $accent-color;
-    }
   }
   .scroll-info {
     writing-mode: vertical-lr;

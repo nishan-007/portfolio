@@ -23,11 +23,34 @@ li {
   list-style: none;
 }
 
-button {
+button,
+input,
+select,
+textarea {
   border: transparent;
   font-family: "Poppins", sans-serif;
   color: #fff;
+  font-size: 1rem;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $primary-color;
+  opacity: 1; /* Firefox */
+}
+
+.btn-default {
   cursor: pointer;
+  background-color: $secondary-color;
+  padding: $btn-padding;
+  border-radius: $btn-border-radius;
+  font-size: $font-size-medium-2;
+  box-shadow: $btn-box-shadow;
+  transition: transform 125ms linear;
+  &:hover {
+    transform: scale(1.1);
+    background-color: $accent-color;
+  }
 }
 
 .d-flex {

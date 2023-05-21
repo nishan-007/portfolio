@@ -7,18 +7,6 @@
   margin-block: $section-spacing;
   gap: 48px;
   padding-inline: $spacing-inline;
-  button {
-    background-color: $secondary-color;
-    padding: $btn-padding;
-    border-radius: $btn-border-radius;
-    font-size: $font-size-medium-2;
-    box-shadow: $btn-box-shadow;
-    transition: transform 125ms linear;
-    &:hover {
-      background-color: $accent-color;
-      transform: scale(1.1);
-    }
-  }
 }
 
 .skills {
