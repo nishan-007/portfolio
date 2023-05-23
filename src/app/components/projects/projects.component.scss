@@ -15,7 +15,7 @@ $transition-time: 175ms;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 5%;
+      width: 3%;
       border-radius: $design-line-border-radius-left;
       left: -60px;
       height: $design-line-height;
@@ -145,6 +145,13 @@ $transition-time: 175ms;
 }
 
 @media screen and (max-width: 872px) {
+  .projects-heading-wrapper {
+    h2 {
+      &::before {
+        width: 5%;
+      }
+    }
+  }
   .projects {
     li {
       min-height: 350px;
@@ -172,6 +179,11 @@ $transition-time: 175ms;
 
 @media screen and (max-width: 700px) {
   .projects-wrapper {
+    h2 {
+      &::before {
+        left: -32px;
+      }
+    }
     padding-inline: $spacing-inline-mobile;
   }
 }

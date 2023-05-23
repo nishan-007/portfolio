@@ -14,15 +14,7 @@
   h2 {
     position: relative;
     &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 60%;
       right: -60px;
-      border-radius: $design-line-border-radius-right;
-      height: $design-line-height;
-      background-color: $secondary-color;
     }
   }
   p {
@@ -90,6 +82,7 @@
   }
   .skills {
     h2 {
+      text-align: center;
       &::after {
         width: 35%;
       }

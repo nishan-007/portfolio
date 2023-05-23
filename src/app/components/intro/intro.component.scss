@@ -89,6 +89,7 @@
     text-transform: uppercase;
     transform: translateY(30px);
     animation: fadeIn 325ms ease-in 3s forwards;
+    position: relative;
     z-index: 4;
   }
   h1,

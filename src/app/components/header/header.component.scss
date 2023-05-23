@@ -22,10 +22,13 @@ nav {
     }
   }
   .logo {
-    font-size: $font-size-large;
-    font-weight: bold;
-    strong {
+    font-size: 2.5rem;
+    // text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    //   -0.025em 0 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    // animation: glitch 500ms infinite;
+    em {
       color: $secondary-color;
+      font-style: normal;
     }
   }
   button {
@@ -33,6 +36,42 @@ nav {
     background-color: transparent;
   }
 }
+
+// @keyframes glitch {
+//   0% {
+//     text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+//       -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+//       -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+//   }
+//   14% {
+//     text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+//       -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+//       -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+//   }
+//   15% {
+//     text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+//       0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+//       -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+//   }
+//   49% {
+//     text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+//       0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+//       -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+//   }
+//   50% {
+//     text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+//       0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+//   }
+//   99% {
+//     text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+//       0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+//   }
+//   100% {
+//     text-shadow: -none 0 0 rgba(255, 0, 0, 0.75),
+//       -0.025em -0.025rem 0 rgba(0, 255, 0, 0.75),
+//       -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+//   }
+// }
 
 @media screen and (max-width: 572px) {
   nav {

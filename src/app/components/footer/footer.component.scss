@@ -1,0 +1,31 @@
+@import "../../../variables.scss";
+
+footer {
+  min-height: 200px;
+  border-top: 3px solid $secondary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: $section-spacing;
+  padding-inline: $spacing-inline;
+  a {
+    display: block;
+  }
+  .homepage-link {
+    font-size: $font-size-large;
+    font-weight: bold;
+  }
+  ul {
+    display: flex;
+    gap: 32px;
+    svg {
+      transition: scale 150ms linear;
+      &:hover {
+        scale: 1.4;
+      }
+    }
+  }
+  p {
+    font-size: $font-size-medium-1;
+  }
+}

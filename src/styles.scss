@@ -33,6 +33,12 @@ textarea {
   font-size: 1rem;
 }
 
+textarea {
+  resize: vertical;
+  min-height: 120px;
+  max-height: 550px;
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: $primary-color;
@@ -59,15 +65,29 @@ textarea {
   justify-content: center;
 }
 
-main {
-  // overflow: hidden;
+app-contact,
+.skills {
+  h2 {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30%;
+      right: 0;
+      border-radius: $design-line-border-radius-right;
+      height: $design-line-height;
+      background-color: $secondary-color;
+    }
+  }
 }
 
 @media screen and (min-width: 1201px) {
   main {
     .projects-wrapper,
     .skills,
-    .about-me {
+    .about-me,
+    app-contact {
       h2 {
         font-size: $h2-bigger;
         margin-block-end: $margin-32;
@@ -79,9 +99,10 @@ main {
   main {
     .projects-wrapper,
     .skills,
-    .about-me {
+    .about-me,
+    app-contact {
       h2 {
-        // font-size: $h2-medium-1;
+        font-size: $h2-medium-1;
       }
     }
   }
@@ -91,9 +112,18 @@ main {
   main {
     .projects-wrapper,
     .skills,
-    .about-me {
+    .about-me,
+    app-contact {
       h2 {
-        // font-size: $h2-medium-2;
+        font-size: $h2-medium-2;
+      }
+    }
+  }
+  .projects-heading-wrapper,
+  app-contact {
+    h2 {
+      &::before {
+        width: 5%;
       }
     }
   }
@@ -103,7 +133,8 @@ main {
   main {
     .projects-wrapper,
     .skills,
-    .about-me {
+    .about-me,
+    app-contact {
       h2 {
         font-size: $h2-medium-2;
       }
@@ -115,7 +146,8 @@ main {
   main {
     .projects-wrapper,
     .skills,
-    .about-me {
+    .about-me,
+    app-contact {
       h2 {
         font-size: $h2-mobile;
         margin-block-end: $margin-12;

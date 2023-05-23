@@ -1,7 +1,8 @@
 @import "../../../variables.scss";
 
 h2 {
-  font-size: clamp(4rem, 5rem, 5rem);
+  position: relative;
+  text-align: center;
 }
 
 .contacts-wrapper,
@@ -19,6 +20,15 @@ h2 {
 .contact-form {
   flex: 1;
 }
+.contact-text {
+  h3,
+  p {
+    margin-block-end: $margin-32;
+  }
+  h3 {
+    font-size: $font-size-large;
+  }
+}
 
 form {
   display: flex;
@@ -31,9 +41,19 @@ form {
     border-radius: 8px;
     padding: $btn-padding;
     color: $primary-color;
+    &:focus {
+      border-color: $secondary-color;
+      outline: transparent;
+    }
   }
   button {
     align-self: center;
     width: max-content;
+  }
+}
+
+@media screen and (max-width: 872px) {
+  .contacts-wrapper {
+    flex-direction: column;
   }
 }
