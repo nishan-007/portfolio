@@ -1,9 +1,26 @@
 <nav>
-  <a href="" class="logo">N<em>S</em></a>
+  <a [routerLink]="['/']" fragment="home" class="logo">N<em>S</em></a>
   <ul [class.show-links]="showNavLinks">
-    <li><a href="">About me</a></li>
-    <li><a href="">Skills</a></li>
-    <li><a href="">My Projects</a></li>
+    <li>
+      <a [routerLink]="['/']" fragment="about-me" (click)="toggleNavLinks()"
+        >About me</a
+      >
+    </li>
+    <li>
+      <a [routerLink]="['/']" fragment="my-skills" (click)="toggleNavLinks()"
+        >Skills</a
+      >
+    </li>
+    <li>
+      <a [routerLink]="['/']" fragment="my-projects" (click)="toggleNavLinks()"
+        >My Projects</a
+      >
+    </li>
+    <li class="contact-link">
+      <a [routerLink]="['/']" fragment="contact-me" (click)="toggleNavLinks()"
+        >Contact</a
+      >
+    </li>
   </ul>
   <button type="button" (click)="toggleNavLinks()">
     <svg

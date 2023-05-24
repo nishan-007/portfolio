@@ -3,6 +3,11 @@
 h2 {
   position: relative;
   text-align: center;
+  padding-block-start: $section-spacing;
+  &::after {
+    background-color: $secondary-color;
+    top: calc(50% + $section-spacing/2);
+  }
 }
 
 .contacts-wrapper,
@@ -20,13 +25,19 @@ h2 {
 .contact-form {
   flex: 1;
 }
+
 .contact-text {
   h3,
   p {
     margin-block-end: $margin-32;
   }
   h3 {
+    position: relative;
     font-size: $font-size-large;
+    &::before {
+      background-color: $secondary-color;
+      width: 7%;
+    }
   }
 }
 
@@ -41,6 +52,7 @@ form {
     border-radius: 8px;
     padding: $btn-padding;
     color: $primary-color;
+    background-color: $background-normal-color;
     &:focus {
       border-color: $secondary-color;
       outline: transparent;
@@ -55,5 +67,31 @@ form {
 @media screen and (max-width: 872px) {
   .contacts-wrapper {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 572px) {
+  h2 {
+    &::after {
+      width: 20%;
+    }
+  }
+  .contacts-wrapper {
+    gap: $margin-12;
+  }
+  .contacts-wrapper,
+  h2 {
+    padding-inline: $spacing-inline-mobile;
+  }
+  .contact-text {
+    h3 {
+      font-size: $font-size-medium-1;
+    }
+    .brief-info {
+      display: none;
+    }
+    p {
+      margin-block-end: $margin-12;
+    }
   }
 }

@@ -1,4 +1,4 @@
-<section class="intro d-flex" #intro>
+<section class="intro d-flex">
   <div class="name-container d-flex">
     <p>I am</p>
     <hgroup>
@@ -6,7 +6,9 @@
       <h2>Frontend Developer</h2>
     </hgroup>
   </div>
-  <button type="button" class="lets-talk-btn btn-default">Let's talk!</button>
+  <a class="lets-talk-btn btn-default" [routerLink]="['/']" fragment="contact-me">
+    Let's talk!
+  </a>
   <ul class="external-links">
     <li>
       <a href="" class="d-flex">
@@ -80,7 +82,7 @@
     </svg>
   </p>
 </section>
-<app-about-me></app-about-me>
+<app-about-me id="about-me"></app-about-me>
 <app-skills></app-skills>
-<app-projects></app-projects>
-<app-contact></app-contact>
+<app-projects id="my-projects"></app-projects>
+<app-contact id="contact-form"></app-contact>

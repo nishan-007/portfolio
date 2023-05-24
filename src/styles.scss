@@ -13,7 +13,11 @@ body {
   background-color: rgb(26, 35, 55);
   color: #fff;
   font-family: "Poppins", sans-serif;
+}
+
+html {
   scroll-behavior: smooth;
+  scroll-margin-top: 10rem;
 }
 
 a {
@@ -78,9 +82,26 @@ app-contact,
       right: 0;
       border-radius: $design-line-border-radius-right;
       height: $design-line-height;
-      background-color: $secondary-color;
     }
   }
+}
+
+.projects-heading-wrapper h2,
+.contact-text h3 {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3%;
+    border-radius: $design-line-border-radius-left;
+    left: -60px;
+    height: $design-line-height;
+  }
+}
+
+app-contact {
+  margin-block: $section-spacing;
 }
 
 @media screen and (min-width: 1201px) {
@@ -153,6 +174,13 @@ app-contact,
         font-size: $h2-mobile;
         margin-block-end: $margin-12;
       }
+    }
+  }
+  .projects-heading-wrapper h2,
+  .contact-text h3 {
+    &::before {
+      left: -32px;
+      width: 7%;
     }
   }
 }

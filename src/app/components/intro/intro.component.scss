@@ -2,7 +2,7 @@
 
 .intro {
   min-height: calc(100vh - 72px);
-  min-height: calc(100dvh - 72px);
+  min-height: calc(85dvh - 72px);
   background-color: $background-dark-color;
   flex-direction: column;
   gap: 72px;
@@ -48,7 +48,7 @@
   }
   &::after {
     right: -250px;
-    top: 28%;
+    bottom: 0;
     background: url("../../../assets/img/purple-shadow.svg") no-repeat 0 0;
   }
   .name-container {
@@ -129,11 +129,7 @@
 @media screen and (max-width: 850px) {
   .intro {
     &::before {
-      top: 35%;
       left: -200px;
-    }
-    &::after {
-      top: 40%;
     }
     h1 {
       font-size: 5.5rem;
@@ -152,13 +148,6 @@
 @media screen and (max-width: 700px) {
   .intro {
     gap: 48px;
-    &::before {
-      top: 30%;
-      left: -200px;
-    }
-    &::after {
-      top: 40%;
-    }
     h1 {
       font-size: 4.5rem;
     }
@@ -180,18 +169,19 @@
   .intro {
     gap: 32px;
     &::before {
-      top: 10%;
-      left: -300px;
+      left: -50px;
+      top: 25%;
+      transform: translateX(-50%);
     }
     &::after {
-      top: 35%;
-      right: -300px;
+      right: -350px;
+      bottom: 0;
     }
     h1 {
       font-size: 3.5rem;
     }
     h2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     .name-container {
       p {
@@ -216,15 +206,19 @@
 
 @media screen and (max-width: 472px) {
   .intro {
+    padding-inline: $spacing-inline-mobile;
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      padding-block-end: 0.5rem;
+      white-space: nowrap;
     }
     h2 {
-      font-size: 1.25rem;
+      font-size: 1.75rem;
     }
     .name-container {
       p {
         font-size: 2rem;
+        line-height: 1.25;
       }
     }
   }

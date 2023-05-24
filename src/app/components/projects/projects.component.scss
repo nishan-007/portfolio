@@ -3,22 +3,35 @@ $transition-time: 175ms;
 
 .projects-wrapper {
   padding-inline: $spacing-inline;
-  margin-block: $section-spacing;
+  padding-block-start: $section-spacing;
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 600px;
+    aspect-ratio: 1/1;
+    background: no-repeat center center/contain;
+  }
+  &::after {
+    background-image: url("../../../assets/img/purple-shadow-2.svg");
+    right: -250px;
+    top: 0;
+  }
+  &::before {
+    background-image: url("../../../assets/img/green-shadow.svg");
+    left: -300px;
+    bottom: 0;
+  }
 }
 
-.projects-heading-wrapper {
+.projects-wrapper {
   h2 {
     position: relative;
-    margin-block-end: $margin-32;
     &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 3%;
-      border-radius: $design-line-border-radius-left;
-      left: -60px;
-      height: $design-line-height;
       background-color: $accent-color;
     }
   }
@@ -27,7 +40,7 @@ $transition-time: 175ms;
 .projects {
   width: 100%;
   isolation: isolate;
-  margin-block: $section-spacing;
+  margin-block-start: $section-spacing;
   figure {
     &:hover .project-desc,
     &:hover .project-btn-wrapper {
@@ -145,13 +158,6 @@ $transition-time: 175ms;
 }
 
 @media screen and (max-width: 872px) {
-  .projects-heading-wrapper {
-    h2 {
-      &::before {
-        width: 5%;
-      }
-    }
-  }
   .projects {
     li {
       min-height: 350px;
@@ -177,13 +183,8 @@ $transition-time: 175ms;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 572px) {
   .projects-wrapper {
-    h2 {
-      &::before {
-        left: -32px;
-      }
-    }
     padding-inline: $spacing-inline-mobile;
   }
 }

@@ -4,9 +4,9 @@
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  margin-block: $section-spacing;
   gap: 48px;
   padding-inline: $spacing-inline;
+  padding-block-start: $section-spacing;
 }
 
 .skills {
@@ -14,7 +14,9 @@
   h2 {
     position: relative;
     &::after {
+      width: 50%;
       right: -60px;
+      background-color: $accent-color;
     }
   }
   p {
@@ -28,10 +30,12 @@
   ul {
     display: flex;
     flex-wrap: wrap;
+    margin-block: $margin-32;
+    gap: 28px;
     li {
       flex-direction: column;
-      margin: 0 60px 72px 0;
       min-width: 84px;
+      text-align: center;
     }
   }
   svg {
@@ -40,8 +44,9 @@
   }
   p {
     font-weight: 500;
+    margin-block-start: 8px;
   }
-  button {
+  a {
     display: none;
   }
 }
@@ -67,13 +72,6 @@
       }
     }
   }
-  .skills-list {
-    ul {
-      li {
-        margin: 0 42px 60px 0;
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 872px) {
@@ -90,21 +88,20 @@
     p {
       text-align: left;
     }
-    button {
+    a {
       display: none;
     }
   }
   .skills-list {
     ul {
       li {
-        margin: 0 60px 42px 0;
         svg {
           width: 48px;
           height: 48px;
         }
       }
     }
-    button {
+    a {
       display: block;
     }
   }
@@ -112,7 +109,7 @@
 
 @media screen and (max-width: 700px) {
   .skills-list {
-    button {
+    a {
       font-size: $font-size-medium-2;
     }
   }
@@ -124,23 +121,23 @@
   }
   .skills {
     h2 {
+      text-align: start;
       &::after {
-        width: 60%;
-        right: -32px;
+        width: 65%;
+        right: -24px;
       }
     }
   }
   .skills-list {
     ul {
       li {
-        margin: 0 48px 42px 0;
         svg {
           width: 42px;
           height: 42px;
         }
       }
     }
-    button {
+    a {
       font-size: $mobile-font-size;
     }
   }
@@ -150,7 +147,6 @@
   .skills-list {
     ul {
       li {
-        margin: 0 28px 36px 0;
         svg {
           width: 36px;
           height: 36px;

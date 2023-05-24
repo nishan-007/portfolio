@@ -8,6 +8,19 @@ footer {
   align-items: center;
   margin-block-start: $section-spacing;
   padding-inline: $spacing-inline;
+  position: relative;
+  background-color: $background-normal-color;
+  &::after {
+    content: "";
+    background: url("../../../assets/img/blue-shadow.svg") no-repeat center
+      center/cover;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 600px;
+    aspect-ratio: 1/1;
+    z-index: -1;
+  }
   a {
     display: block;
   }
@@ -35,9 +48,12 @@ footer {
     flex-direction: column;
     align-items: center;
     padding-inline: $spacing-inline-mobile;
-    padding-block: 32px;
+    padding-block-start: 32px;
     gap: 32px;
     text-align: center;
+    p {
+      font-size: $mobile-font-size;
+    }
     .homepage-link {
       margin-block-end: $margin-12;
     }

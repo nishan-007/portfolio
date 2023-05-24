@@ -1,8 +1,8 @@
-<h2>Contact</h2>
+<h2 id="contact-me">Contact</h2>
 <section class="contacts-wrapper">
   <section class="contact-text">
     <h3>Got a Problem to solve?</h3>
-    <p>
+    <p class="brief-info">
       Get in touch with me through this form. I am looking forward to hear from
       you, knowing your ideas and contributing to your projects with my skills
       that i've gained throughout my training at DA.
@@ -13,17 +13,26 @@
     </p>
   </section>
   <section class="contact-form">
-    <form action="">
-      <input type="text" placeholder="Your Name" />
-      <input type="text" placeholder="Your E-Mail" />
+    <form
+      action="https://nishan-singh.developerakademie.net/portfolio/send_mail/send_mail.php"
+      method="post"
+      (submit)="sendMail()"
+      #contactForm
+    >
+      <input type="text" placeholder="Your Name" required #name />
+      <input type="text" placeholder="Your E-Mail" required #eMail />
       <textarea
         name=""
         id=""
         cols="30"
         rows="6"
         placeholder="Your message"
+        required
+        #message
       ></textarea>
-      <button type="submit" class="btn-default">Send message :)</button>
+      <button type="submit" class="btn-default" #submitBtn>
+        Send message :)
+      </button>
     </form>
   </section>
 </section>
