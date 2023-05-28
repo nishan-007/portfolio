@@ -20,7 +20,10 @@
     }
   }
   p {
-    margin-block-end: $margin-24;
+    margin-block-end: $margin-48;
+  }
+  a {
+    display: inline-block;
   }
 }
 
@@ -31,7 +34,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-block: $margin-32;
-    gap: 28px;
+    gap: 60px;
     li {
       flex-direction: column;
       min-width: 84px;
@@ -47,6 +50,7 @@
     margin-block-start: 8px;
   }
   a {
+    display: inline-block;
     display: none;
   }
 }
@@ -130,6 +134,7 @@
   }
   .skills-list {
     ul {
+      gap: 36px;
       li {
         svg {
           width: 42px;
