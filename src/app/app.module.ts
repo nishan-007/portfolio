@@ -10,7 +10,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -24,7 +24,7 @@ import { RouterModule } from '@angular/router';
     ContactComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, RouterModule],
+  imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -45,17 +45,43 @@ form {
   display: flex;
   flex-direction: column;
   gap: $margin-32;
-  input,
-  textarea {
-    background-color: transparent;
-    border: 1px solid $accent-color;
-    border-radius: 8px;
-    padding: $btn-padding;
-    color: $primary-color;
-    background-color: $background-normal-color;
-    &:focus {
-      border-color: $secondary-color;
-      outline: transparent;
+  p {
+    position: relative;
+    input,
+    textarea {
+      background-color: transparent;
+      border: 1px solid $accent-color;
+      border-radius: 8px;
+      padding: $btn-padding;
+      color: $primary-color;
+      background-color: $background-normal-color;
+      position: relative;
+      width: 100%;
+      &:focus {
+        border-color: $secondary-color;
+        outline: transparent;
+      }
+    }
+    .empty-field {
+      border-color: #e61c40;
+      &:focus {
+        border-color: #e61c40;
+      }
+    }
+    .not-empty {
+      border-color: #70e61c;
+      &:focus {
+        border-color: #70e61c;
+      }
+    }
+    .required-message {
+      color: #e61c40;
+      font-size: 0.75rem;
+    }
+    svg {
+      position: absolute;
+      right: 12px;
+      top: 14px;
     }
   }
   button {
