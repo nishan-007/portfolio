@@ -91,17 +91,17 @@ form {
 }
 
 @media screen and (max-width: 872px) {
+  h2 {
+    &::after {
+      width: 25%;
+    }
+  }
   .contacts-wrapper {
     flex-direction: column;
   }
 }
 
 @media screen and (max-width: 572px) {
-  h2 {
-    &::after {
-      width: 25%;
-    }
-  }
   .contacts-wrapper {
     gap: $margin-12;
   }
@@ -121,6 +121,14 @@ form {
     }
     p {
       margin-block-end: $margin-12;
+    }
+  }
+}
+
+@media screen and (max-width: 472px) {
+  h2 {
+    &::after {
+      width: 15%;
     }
   }
 }

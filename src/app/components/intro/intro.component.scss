@@ -221,3 +221,22 @@
     }
   }
 }
+@media screen and (max-width: 400px) {
+  .intro {
+    padding-inline: $spacing-inline-mobile;
+    h1 {
+      font-size: 2.75rem;
+      padding-block-end: 0.5rem;
+      white-space: nowrap;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    .name-container {
+      p {
+        font-size: 2rem;
+        line-height: 1.25;
+      }
+    }
+  }
+}

@@ -1,23 +1,42 @@
 <nav>
-  <a [routerLink]="['/']" fragment="home" class="logo">N<em>S</em></a>
-  <ul [class.show-links]="showNavLinks">
+  <a [routerLink]="['/']" fragment="home" class="logo" (click)="activeLink(-1)"
+    >N<em>S</em></a
+  >
+  <ul [class.show-links]="showNavLinks" (click)="toggleNavLinks()">
     <li>
-      <a [routerLink]="['/']" fragment="about-me" (click)="toggleNavLinks()"
+      <a
+        [routerLink]="['/']"
+        fragment="about-me"
+        (click)="activeLink(0)"
+        [ngClass]="{ active: isActive === 0 }"
         >About me</a
       >
     </li>
     <li>
-      <a [routerLink]="['/']" fragment="my-skills" (click)="toggleNavLinks()"
+      <a
+        [routerLink]="['/']"
+        fragment="my-skills"
+        (click)="activeLink(1)"
+        [ngClass]="{ active: isActive === 1 }"
         >Skills</a
       >
     </li>
     <li>
-      <a [routerLink]="['/']" fragment="my-projects" (click)="toggleNavLinks()"
+      <a
+        [routerLink]="['/']"
+        fragment="my-projects"
+        (click)="activeLink(2)"
+        [ngClass]="{ active: isActive === 2 }"
         >My Projects</a
       >
     </li>
     <li class="contact-link">
-      <a [routerLink]="['/']" fragment="contact-me" (click)="toggleNavLinks()"
+      <a
+        [routerLink]="['/']"
+        fragment="contact-me"
+        (click)="activeLink(3)"
+        [ngClass]="{ active: isActive === 3 }"
+        #contactme
         >Contact</a
       >
     </li>

@@ -10,6 +10,7 @@ footer {
   padding-inline: $spacing-inline;
   position: relative;
   background-color: $background-normal-color;
+  overflow: hidden;
   &::after {
     content: "";
     background: url("../../../assets/img/blue-shadow.svg") no-repeat center

@@ -1,22 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { IntroComponent } from './components/intro/intro.component';
-import { ProjectsComponent } from './components/projects/projects.component';
+import { ImprintComponent } from './components/imprint/imprint.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: IntroComponent
+    component: IntroComponent,
   },
   {
     path: 'imprint',
-    component: ProjectsComponent
-  }
+    component: ImprintComponent,
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {anchorScrolling: 'enabled'})],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

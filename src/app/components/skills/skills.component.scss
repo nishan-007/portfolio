@@ -44,6 +44,10 @@
   svg {
     width: 56px;
     height: 56px;
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: translateY(-12px);
+    }
   }
   p {
     font-weight: 500;
@@ -127,14 +131,15 @@
     h2 {
       text-align: start;
       &::after {
-        width: 65%;
+        width: 60%;
         right: -24px;
       }
     }
   }
   .skills-list {
     ul {
-      gap: 36px;
+      gap: 32px 42px;
+      justify-content: space-between;
       li {
         svg {
           width: 42px;
@@ -151,11 +156,8 @@
 @media screen and (max-width: 472px) {
   .skills-list {
     ul {
+      gap: 42px 20px;
       li {
-        svg {
-          width: 36px;
-          height: 36px;
-        }
       }
     }
   }

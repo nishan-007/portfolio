@@ -74,7 +74,7 @@
       </a>
     </li>
   </ul>
-  <p class="scroll-info">
+  <a [routerLink]="['/']" fragment="about-me" class="scroll-info">
     Scroll Down
     <svg
       width="16"
@@ -88,7 +88,7 @@
         fill="white"
       />
     </svg>
-  </p>
+  </a>
 </section>
 <app-about-me id="about-me"></app-about-me>
 <app-skills></app-skills>

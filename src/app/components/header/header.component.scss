@@ -18,6 +18,12 @@ nav {
       margin-inline-start: $margin-32;
       a {
         font-size: $font-size-medium-2;
+        text-decoration: underline transparent 2.5px;
+        text-underline-offset: 12px;
+      }
+      .active {
+        color: $secondary-color;
+        text-decoration-color: $accent-color;
       }
     }
   }
@@ -87,7 +93,7 @@ nav {
       background-color: $background-dark-color-90;
       gap: 48px;
       position: fixed;
-      top: $nav-height;
+      top: $nav-height-mobile;
       right: 0;
       left: 0;
       bottom: 0;

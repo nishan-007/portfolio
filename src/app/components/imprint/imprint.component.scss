@@ -1,0 +1,19 @@
+@import "../../../variables.scss";
+
+.imprint {
+  padding-inline: $spacing-inline;
+  margin-block: $section-spacing;
+  h1 {
+    font-size: $font-size-large;
+    margin-block-end: $margin-32;
+  }
+  h2 {
+    margin-block: 24px;
+  }
+}
+
+@media (max-width: 572px) {
+  .imprint {
+    padding-inline: $spacing-inline-mobile;
+  }
+}

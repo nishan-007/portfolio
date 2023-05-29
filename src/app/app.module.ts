@@ -12,6 +12,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 // import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ImprintComponent } from './components/imprint/imprint.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { RouterModule } from '@angular/router';
     ProjectsComponent,
     ContactComponent,
     FooterComponent,
+    ImprintComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],

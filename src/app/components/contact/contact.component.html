@@ -24,13 +24,13 @@
           type="text"
           placeholder="Your Name"
           required
+          name="name"
           #name
           (blur)="checkIfNameEmpty()"
           [ngClass]="{
             'empty-field': isNameEmpty,
-            'not-empty': !isNameEmpty && name.value.length > 0
+            'not-empty': !isNameEmpty && name.value.length > 3
           }"
-          (keyup)="checkIfNameEmpty()"
         />
         <svg
           width="26"
@@ -60,7 +60,7 @@
         </svg>
 
         <span *ngIf="isNameEmpty" class="required-message">
-          Your Name is required
+          Your fullname is required
         </span>
       </p>
       <p>
@@ -70,7 +70,6 @@
           required
           #eMail
           (blur)="checkIfEmailEmpty()"
-          (keyup)="checkIfEmailEmpty()"
           [ngClass]="{
             'empty-field': isEmailEmpty,
             'not-empty': !isEmailEmpty && eMail.value.includes('@')
@@ -115,6 +114,7 @@
           rows="6"
           placeholder="Your message"
           required
+          name="message"
           minlength="25"
           #message
           (blur)="checkIfMessageEmpty()"
