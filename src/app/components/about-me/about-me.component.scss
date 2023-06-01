@@ -15,10 +15,9 @@
       isolation: isolate;
       &::before {
         content: "";
-        background: url("../../../assets/img/background-design.svg") no-repeat 0
-          0;
+        background: url("/portfolio/assets/img/background-design.svg") no-repeat 0 0;
         position: absolute;
-        top: 15%;
+        top: 25%;
         right: 0;
         width: 450px;
         aspect-ratio: 1;

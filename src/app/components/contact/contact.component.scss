@@ -88,6 +88,28 @@ form {
     align-self: center;
     width: max-content;
   }
+  .mail-sent {
+    position: fixed;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    padding: $btn-padding;
+    border-radius: $btn-border-radius;
+    background-color: $secondary-color;
+    display: flex;
+    gap: $margin-12;
+    align-items: center;
+    justify-content: center;
+    transition: bottom 0.3s ease-in-out;
+    width: max-content;
+    svg {
+      position: initial;
+    }
+  }
+  .pop-up {
+    bottom: 16px;
+  }
 }
 
 @media screen and (max-width: 872px) {
@@ -129,6 +151,26 @@ form {
   h2 {
     &::after {
       width: 15%;
+    }
+  }
+}
+
+@media (min-width: 1620px) {
+  .contact-text {
+    h3 {
+      &::before {
+        width: 5%;
+      }
+    }
+  }
+}
+
+@media (min-width: 2080px) {
+  .contact-text {
+    h3 {
+      &::before {
+        width: 3%;
+      }
     }
   }
 }

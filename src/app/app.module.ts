@@ -10,7 +10,8 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
-// import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ImprintComponent } from './components/imprint/imprint.component';
 
@@ -26,7 +27,13 @@ import { ImprintComponent } from './components/imprint/imprint.component';
     FooterComponent,
     ImprintComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

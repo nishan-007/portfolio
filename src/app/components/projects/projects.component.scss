@@ -17,12 +17,12 @@ $transition-time: 175ms;
     background: no-repeat center center/contain;
   }
   &::after {
-    background-image: url("../../../assets/img/purple-shadow-2.svg");
+    background-image: url("/portfolio/assets/img/purple-shadow-2.svg");
     right: -250px;
     top: 0;
   }
   &::before {
-    background-image: url("../../../assets/img/green-shadow.svg");
+    background-image: url("/portfolio/assets/img/green-shadow.svg");
     left: -300px;
     bottom: 0;
   }
@@ -47,7 +47,7 @@ $transition-time: 175ms;
       z-index: 2;
     }
     &:hover .project-screenshot {
-      transform: scale(1.8, 1.5) translateY(-24px);
+      transform: scale(1.7, 1.4) translateY(-42px);
     }
     &:hover .project-desc {
       background-color: #fff;
@@ -164,14 +164,14 @@ $transition-time: 175ms;
   .project-desc {
     padding-inline: $spacing-inline-mobile;
     p {
-      margin-block-end: $margin-12;
+      margin-block-end: 6px;
     }
     .tech-info {
       font-size: $font-size-medium-2;
     }
     h3 {
       font-size: $font-size-medium-1;
-      margin-block-end: $margin-12;
+      margin-block: 12px 0;
     }
   }
 }
@@ -194,7 +194,6 @@ $transition-time: 175ms;
     }
     h3 {
       font-size: $font-size-medium-1;
-      margin-block: $margin-12;
     }
   }
   .project-list {
