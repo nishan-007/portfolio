@@ -1,8 +1,8 @@
 <nav>
-  <a [routerLink]="['/']" fragment="home" class="logo" (click)="activeLink(-1)"
-    >N<em>S</em></a
-  >
-  <ul [class.show-links]="showNavLinks" (click)="toggleNavLinks()">
+  <a [routerLink]="['/']" fragment="home" class="logo" (click)="activeLink(-1)">
+    N<em>S</em>
+  </a>
+  <ul [class.show-links]="showNavLinks" (click)="toggleNavLinks()" role="list">
     <li>
       <a
         [routerLink]="['/']"

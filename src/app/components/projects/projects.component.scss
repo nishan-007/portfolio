@@ -17,12 +17,12 @@ $transition-time: 175ms;
     background: no-repeat center center/contain;
   }
   &::after {
-    background-image: url("/portfolio/assets/img/purple-shadow-2.svg");
+    background-image: url("/assets/img/purple-shadow-2.svg");
     right: -250px;
     top: 0;
   }
   &::before {
-    background-image: url("/portfolio/assets/img/green-shadow.svg");
+    background-image: url("/assets/img/green-shadow.svg");
     left: -300px;
     bottom: 0;
   }
