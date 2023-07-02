@@ -19,6 +19,8 @@ body {
   background-color: rgb(26, 35, 55);
   color: #fff;
   font-family: "Poppins", sans-serif;
+  max-width: 2480px;
+  margin: 0 auto;
 }
 
 main {
@@ -127,6 +129,12 @@ app-contact,
 
 app-contact {
   margin-block: $section-spacing;
+}
+
+@media screen and (min-width: 2480px) {
+  body {
+    border-left: 1px solid $accent-color;
+  }
 }
 
 @media screen and (min-width: 1201px) {
