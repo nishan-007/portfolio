@@ -149,6 +149,11 @@ app-contact {
       }
     }
   }
+  .projects-heading-wrapper h2 {
+    &::before {
+      width: 2%;
+    }
+  }
 }
 @media screen and (max-width: 1200px) {
   main {
